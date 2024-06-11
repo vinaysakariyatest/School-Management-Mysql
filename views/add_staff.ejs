@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Staff</title>
+    <style>
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        .nav a{
+            margin:20px;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="addstaff">Add Staff</a>
+            <a href="addstudent">Add Student</a>
+            <!-- <a href="addresult">Add Result</a> -->
+            <a href="viewstaff">View Staff</a>
+            <a href="view_result">View Result</a>
+            <a href="viewstudent">View Student</a>
+            <a href="addstd">Add STD</a>
+            <a href="adddiv">Add Div</a>
+        </div>
+    </div>
+
+    <h1 align="center">Add Staff</h1>
+    <form method="post">
+        <table align="center">
+            <tr>
+                <td>Staff Name:</td>
+                <td><input type="text" name="sname"></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type="text" name="city"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

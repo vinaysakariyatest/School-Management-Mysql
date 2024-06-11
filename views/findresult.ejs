@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Result</title>
+  
+  </head>
+  <body>
+    <h1 align="center">Find Result</h1>
+    <form method="post">
+      <table align="center">
+        <tr>
+          <td><b>Select Standard:</b></td>
+          <td>
+            <select name="std">
+              <option value="" selected disabled>Selct Standard</option>
+              <% result.forEach(function (data){%>
+              <option value="<%= data.std%>"><%= data.std%></option>
+              <%})%>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Select Division:</b></td>
+          <td>
+            <select name="division">
+              <option value="" selected disabled>Selct Division</option>
+              <% result.forEach(function (data){%>
+
+              <option value="<%= data.division%>"><%= data.division%></option>
+              <%})%>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Enter Roll No:</b></td>
+          <td><input type="text" name="rno" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="View" /></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+

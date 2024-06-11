@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Student</title>
+    <style>
+        input{
+            margin: 5px 0px;
+        }
+        select{
+            margin: 5px 0px;
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        .nav a{
+            margin:20px;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <a href="addstaff">Add Staff</a>
+            <a href="addstudent">Add Student</a>
+            <a href="viewstaff">View Staff</a>
+            <a href="view_result">View Result</a>
+            <a href="viewstudent">View Student</a>
+            <a href="addstd">Add STD</a>
+            <a href="adddiv">Add Div</a>
+        </div>
+    </div>
+
+    <h1 align="center">View Student</h1>
+    <table align="center">
+        <form method="post">
+        <tr>
+            <td>Select Standard:</td>
+            <td>
+                <select name="std">
+                    <option selected disabled>Select Standard</option>
+                    <% result.forEach(function(data){%>
+                    <option value="<%= data.std%>"><%= data.std%></option>
+                    <%})%>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Select Divsion:</td>
+            <td>
+                <select name="division">
+                    <option selected disabled>Select Division</option>
+                    <% result.forEach(function(data){%>
+                    <option value="<%= data.division%>"><%= data.division%></option>
+                    <%})%>
+                </select>
+            </td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="View"></td>
+        </tr>
+    </form>
+    </table>
+
+    <!-- <table align="center" border="1" cellspadding="5">
+        
+        <thead>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Standard</th>
+            <th>Division</th>
+            <th>Add Result</th>
+        </thead>
+
+        <tbody>
+            <% result.forEach(function (data){%>
+               <%if(data.length>0){%>
+                <tr>
+                    <td><%= data.rno%></td>
+                    <td><%= data.name%></td>
+                    <td><%= data.standard%></td>
+                    <td><%= data.division%></td>
+                    <td><a href="/addresult/<%= data.id%>">Add Result</a></td>
+                </tr>
+                <%}%>
+            <%})%>
+        </tbody>
+    </table> -->
+</body>
+</html>

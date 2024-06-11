@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Result</title>
+    <style>
+        input{
+            margin: 5px 0px;
+        }
+        select{
+            margin: 5px 0px;
+        }
+        .header{
+            display: flex;
+            justify-content: center;
+        }
+        .nav a{
+            margin:20px;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+          <a href="staffdashboard">Dashboard</a>
+          <a href="staffstudent">View Student</a>
+        </div>
+      </div>
+
+    <h1 align="center">View Student</h1>
+    <table align="center" border="1" cellspadding="5">
+        
+        <thead>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Standard</th>
+            <th>Division</th>
+            <th>Add Result</th>
+            <th>View Result</th>
+        </thead>
+
+        <tbody>
+            <% result.forEach(function (data){%>
+                <tr>
+                    <td><%= data.rno%></td>
+                    <td><%= data.name%></td>
+                    <td><%= data.standard%></td>
+                    <td><%= data.division%></td>
+                    <td><a href="/addresult/<%= data.id%>">Add Result</a></td>
+                    <!-- <td><a href="/updateresult/<%= data.id%>">Update Result</a></td> -->
+                    <td><a href="/viewresult/<%= data.rno%>">View Result</a></td>
+                </tr>
+            <%})%>
+        </tbody>
+    </table>
+</body>
+</html>

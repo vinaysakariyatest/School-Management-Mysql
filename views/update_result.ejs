@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Result</title>
+    
+  </head>
+  <body>
+
+    <h1 align="center">Add Result</h1>
+<% result.forEach(function(data){%>
+
+    <form method="post">
+      <table align="center">
+        <tr>
+          <td>Roll No:</td>
+          <td><input type="text" name="rno" value="<%= data.rno%>"></td>
+        </tr>
+        <tr>
+          <td>Student Name:</td>
+          <td><input type="text" name="student" value="<%= data.sname%>"></td>
+        </tr>
+        <tr>
+          <td>Standard:</td>
+          <td><input type="text" name="std" value="<%= data.std%>"></td>
+        </tr>
+        <tr>
+          <td>Division:</td>
+          <td><input type="text" name="division" value="<%= data.division%>"></td>
+        </tr>
+
+        <tr>
+          <td>Gujarati:</td>
+          <td><input type="text" name="guj" value="<%= data.guj%>"></td>
+        </tr>
+        <tr>
+          <td>English:</td>
+          <td><input type="text" name="eng" value="<%= data.eng%>"></td>
+        </tr>
+        <tr>
+          <td>Maths:</td>
+          <td><input type="text" name="maths" value="<%= data.maths%>"></td>
+        </tr>
+        <tr>
+          <td>Hindi:</td>
+          <td><input type="text" name="hindi" value="<%= data.hindi%>"></td>
+        </tr>
+        <tr>
+          <td>Science:</td>
+          <td><input type="text" name="sci" value="<%= data.science%>"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Update Result" /></td>
+        </tr>
+      </table>
+    </form>
+<%})%>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<h1 align="center">View Result</h1>
+<table align="center" border="1">
+    <thead>
+      <th>Roll No</th>
+      <th>Student Name</th>
+      <th>Standard</th>
+      <th>Division</th>
+      <th>Gujarati</th>
+      <th>English</th>
+      <th>Maths</th>
+      <th>Hindi</th>
+      <th>Science</th>
+      <th>Total</th>
+      <th>Percentage</th>
+    </thead>
+  
+    <tbody>
+      <% result.forEach(function (data){%>
+        <tr>
+        <td><%= data.rno%></td>
+        <td><%= data.sname%></td>
+        <td><%= data.std%></td>
+        <td><%= data.division%></td>
+        <td><%= data.guj%></td>
+        <td><%= data.eng%></td>
+        <td><%= data.maths%></td>
+        <td><%= data.hindi%></td>
+        <td><%= data.science%></td>
+        <td><%= data.total%></td>
+        <td><%= data.avg%></td>
+      </tr>
+
+      <%})%>
+    </tbody>
+  </table>
